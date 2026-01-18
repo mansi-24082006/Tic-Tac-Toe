@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 2px solid #764ba2;
+    box-shadow: 0 0 15px rgba(118,75,162,0.6);
+}
+
+.navbar h1 {
+    font-size: 2rem;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid #764ba2;
+    box-shadow: 0 0 10px #764ba2, 0 0 20px #667eea inset;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #764ba2, 0 0 25px #667eea inset;
+}
+
+/* Info and Button */
+.info {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #764ba2;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #667eea;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: #1f1f1f;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px #764ba2;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    margin: 10px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 2px solid #764ba2;
+    background-color: #121212;
+    color: #fff;
+}
+
+.modal-content button {
+    margin-top: 15px;
+}
+
+/* Alert Box */
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #1f1f1f;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 100;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px #764ba2;
+}
+
+.alert-box.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.alert-box p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.alert-box button {
+    padding: 8px 15px;
+    background: #764ba2;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
