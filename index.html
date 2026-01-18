@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Player Modal -->
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Player Names</h2>
+            <input type="text" id="player1Input" placeholder="Player 1 (X)">
+            <input type="text" id="player2Input" placeholder="Player 2 (O)">
+            <button id="startBtn">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Tic Tac Toe</h1>
+    </nav>
+
+    <div class="container">
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <div class="info" id="info"></div>
+        <button id="restartBtn">Restart Game</button>
+    </div>
+
+    <!-- Alert popup -->
+    <div id="alertBox" class="alert-box">
+        <p id="alertMessage"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+
+    <audio id="turnSound" src="https://www.soundjay.com/button/beep-07.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
