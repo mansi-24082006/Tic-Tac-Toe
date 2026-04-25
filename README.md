@@ -8,7 +8,7 @@ This project demonstrates core JavaScript logic, DOM manipulation, and responsiv
 ## 🌐 Live Demo
 
 🔗 **Live Project Link:**  
-👉 [Live Link](https://mansi-24082006.github.io/Tic-Tac-Toe/)
+👉 [Live Link](https://mansi-99914.github.io/Tic-Tac-Toe/)
 
 ## 🚀 Features
 
